@@ -1,0 +1,183 @@
+.container-header{
+	display: grid;
+	grid-template-columns: repeat(4, calc(100% / 4));
+	grid-row: 1;
+	grid-column: 2 / 6;
+}
+.header__marca-container h1{
+	font-family: 'marca';
+	letter-spacing: 3px;
+}
+.header__marca-container, .nav__items{
+	display: flex;
+	align-items: center;
+}
+.header__nav{
+	display: flex;
+	grid-column: 3 / 5;
+}
+.nav__items{
+	flex: 1;
+	display: grid;
+	grid-template-columns: repeat(4, calc(100% / 4));
+	justify-items: center;
+	font-weight: bold;
+}
+.nav__item:not(:last-child):hover{
+	opacity: 1;
+}
+.header__nav .nav__item:last-child{
+	border-radius: 20px;
+	padding: 15px;
+	background-color: var(--pontual);
+	transition: .3s;
+}
+.header__nav .nav__item:last-child:hover{
+	box-shadow: 1px 1px 15px var(--pontual);
+}
+.nav__item{
+	cursor: pointer;
+}
+.nav__item:nth-child(-n+3){
+	opacity: .2;
+	transition: .4s;
+}
+.header__nav .nav__item:nth-child(-n+3):hover::after{
+	width: 100%;
+}
+.header__nav .nav__item:nth-child(-n+3)::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: var(--pontual);
+	transition: 1s;
+}
+
+/* Menu Mobile */
+
+
+/* hamburguer */
+
+.trigger-menu{
+	display: none;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-end;
+	grid-row: 1;
+	grid-column: 4;
+	padding-bottom: 5px;
+}
+.bars{
+	background-color: var(--primaria);
+	width: 35px;
+	height: 4px;
+	margin: 4px;
+	border-radius: 10px;
+	transition: 1s;
+}
+.bars--active{
+	width: 35px;
+}
+.bars--active:first-child{
+	transform: rotate(45deg) translate(5px, 12px);
+}
+.bars--active:nth-child(2){
+	opacity: 0;
+	/* transform: rotate(-45deg) translateY(-8px); */
+}
+.bars--active:nth-child(3){
+	/* opacity: 0; */
+	transform: rotate(-45deg) translate(5px, -12px);
+
+}
+
+/* ******************** */
+
+.nav-items a:visited > .nav__item-mobile{
+	background-color: var(--pontual);
+}
+.nav__item-mobile:not(:last-child):hover{
+	color: var(--pontual);
+}
+.header__nav-mobile{
+	display: none;
+	position: fixed;
+	width: 100%;
+	right: 0px;
+	bottom: -100px;
+	transition: .4s;
+}
+.header__nav-mobile .nav__items{
+	display: grid;
+	padding: 10px;
+}
+.nav__item-mobile{
+	font-size: 25px;
+	padding: 10px;
+	transition: .4s;
+
+}
+.nav__items .nav__item-mobile:last-child{
+	background-color: var(--pontual);
+	border-radius: 10px;
+	padding: 10px 15px;
+}
+#menu:checked ~ .header__nav-mobile{
+	bottom: 0px;
+}
+/* ------------------------------ BREAKPOINTS  ------------------------------*/
+
+/* CELULAR */
+
+@media screen and (max-width: 768px){
+
+	/* MENEU */
+
+	.header__nav{
+		display: none;
+	}
+	.trigger-menu{
+		display: flex;
+	}
+	.header__nav-mobile{
+		display: flex;
+	}
+	.header__marca-container{
+		/* align-items: flex-end; */
+		grid-column: 1 / 4;
+		font-size: 12px;
+	}
+
+	/* HOME */
+
+	.container-home{
+		grid-template-rows: 100px 40vh 1fr !important;
+	}
+	.container-logo{
+		display: flex;
+		align-items: flex-end;
+		justify-self: center;
+		grid-row: 2 !important;
+		grid-column: 2 / 6 !important;
+	}
+	.container-logo img{
+		width: 200px;
+	}
+	.home__frase{
+		padding-top: 30px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		text-align: center;
+		grid-column: 2 / 6 !important;
+	}
+}
+
+/* MONITORES PEQUENOS */
+
+@media screen and (max-width: 1024px){
+	.header__nav{
+		grid-column: 2 / 5;
+	}
+}

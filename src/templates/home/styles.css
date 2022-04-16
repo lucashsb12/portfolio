@@ -1,0 +1,42 @@
+.container-home{
+	background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
+	-web-kit-background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
+	-moz-background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
+	color: var(--primaria);
+	grid-row: 1;
+	grid-column: 1 / 7;
+	display: grid;
+	grid-template-columns: repeat(6, calc(100% / 6));
+	grid-template-rows: 100px 30vh 1fr;
+	scroll-snap-align: start;
+	scroll-padding-top: 15vh;
+}
+.home__frase{
+	grid-row: 3;
+	grid-column: 2 / 4;
+}
+.container-logo{
+	grid-row: 3;
+	grid-column: 5;
+	animation: logo-motion 25s infinite;
+}
+.logo{
+	filter: drop-shadow(2px 4px 6px rgba(3, 212, 212, 0.774));
+	transition: 1s;
+}
+.logo:hover{
+	transform: rotate(180deg);
+}
+@keyframes logo-motion{
+	0%{ transform: translateY(0px);}
+	25%{ transform: translateY(-50px);}
+	50%{ transform: translateY(0px);}
+	75%{ transform: translateY(-50px);}
+	100%{ transform: translateY(0px);}
+}
+
+@keyframes logo-rotation {
+	0%{ transform: rotate(0deg);}
+	50%{ transform: rotate(360deg);}
+	100%{ transform: rotate(0deg);}
+}
