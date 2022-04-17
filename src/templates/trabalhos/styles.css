@@ -1,13 +1,11 @@
 .container-trabalhos{
 	display: grid;
 	grid-template-columns: repeat(6, calc(100% / 6));
-	grid-template-rows: 100px 30vh 1fr;
+	grid-template-rows: 100px 25vh 1fr 10vh;
 	grid-row: 2;
 	grid-column: 1 / 7;
 	scroll-padding-top: 15vh;
 	scroll-snap-align: start;
-	background: rgb(108,15,217);
-	background: linear-gradient(90deg, rgba(108,15,217,1) 0%, rgba(183,12,232,1) 75%);;
 	color: var(--primaria);
 }
 .trabalhos__titulos{
@@ -17,18 +15,133 @@
 	grid-row: 1;
 	grid-column: 3 / 5;
 	font-size: 20px;
-	/* padding: 10px; */
+}
+.trabalhos__titulos h2{
+	cursor: pointer;
+}
+.container-trabalhos__explicacao{
+	grid-row: 2;
+	grid-column: 3 / 5;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
 }
 .container-cards{
-	display: flex;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	flex-flow: row nowrap;
 	justify-content: stretch;
 	grid-row: 3;
 	grid-column: 2 / 6;
+	width: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+}
+.cards{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+	width: 100%;
+	scroll-snap-align: center;
 }
 .trabalhos__card{
-	flex: 1;
-	width: 300px;
-	height: 350px;
-	margin: 10px;
+	scroll-snap-align: start;
+	align-items: center;
+}
+.trabalhos__card__p{
+	font-size: 16px;
+	text-align: center;
+	color: var(--primaria);
+}
+.trabalhos__card__button{
+	padding: 15px 25px;
+	border-radius: 10px;
+	color: #0f0f0f;
+	cursor: pointer;
 	background-color: var(--primaria);
+	font-size: 15px;
+}
+
+/* CARDS SITES */
+
+.cards__sites .trabalhos__card{
+	display: grid;
+	grid-template-rows: repeat(3, 150px);
+	justify-items: center;
+	flex: 1;
+	width: 550px;
+	height: 450px;
+	margin: 0px 20px;
+	border-radius: 10px;
+	padding: 20px;
+	background: linear-gradient(322deg, rgba(108,15,217,1) 0%, rgba(183,12,232,1) 75%);;
+}
+.cards__sites .trabalhos__card:first-child .trabalhos__card__img{
+	width: 160px;
+}
+.cards__sites .trabalhos__card:nth-child(2) .trabalhos__card__img{
+	width: 232px;
+}
+.cards__sites .trabalhos__card:last-child .trabalhos__card__img{
+	width: 130px;
+}
+
+
+/* CARDS ARTES */
+
+.cards__artes .trabalhos__card{
+	justify-items: center;
+	flex: 1;
+	width: 550px;
+	height: 100%;
+	/* margin: 0px 20px; */
+	border-radius: 10px;
+	margin: 0px 20px 0px 20px;
+	padding: 0px 20px 0px 20px;
+}
+.cards__artes .trabalhos__card__img{
+	width: 100%;
+	border-radius: 10px;
+}
+
+
+/* ------------------------------ BREAKPOINTS  ------------------------------*/
+
+/* CELULAR */
+
+@media screen and (max-width: 768px){
+	.container-trabalhos{
+		grid-template-rows: 150px 25vh 1fr;
+	}
+	.trabalhos__titulos{
+		justify-content: space-evenly;
+		align-items: center;
+		font-size: 18px;
+	}
+	.container-cards, .trabalhos__titulos{
+		grid-column: 1 / 7;
+	}
+	.cards__sites .trabalhos__card{
+		width: 90vw;
+		height: 400px;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		grid-template-rows: 100px repeat(2, 150px);
+	}
+	.cards__artes .trabalhos__card{
+		width: 95vw;
+	}
+	.trabalhos__card a{
+		display: flex;
+		align-items: center;
+	}
+	.container-trabalhos__explicacao{
+		grid-column: 1 / 7;
+		padding: 0px 30px 0px ;
+		align-items: flex-start;
+	}
 }

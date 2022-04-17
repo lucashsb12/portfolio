@@ -8,9 +8,9 @@ export const Home = () =>{
 			<Header />
 
 			<div className='home__frase'>
-				<h1>Grandes Necessidades <br />
+				<h2>Grandes Necessidades <br />
 					Soluções Criativas
-				</h1>
+				</h2>
 			</div>
 
 			<div className="container-logo">

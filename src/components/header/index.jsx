@@ -16,7 +16,7 @@ export const Header = () =>{
 			<div className="header__marca-container">
 				<h1>Lucas Henrique</h1>
 			</div>
-			<label for="menu" className="trigger-menu" onClick={handleBars}>
+			<label htmlFor="menu" className="trigger-menu" onClick={handleBars}>
 				<span className={`bars ${barsActive ? 'bars--active' : ''}`}></span>
 				<span className={`bars ${barsActive ? 'bars--active' : ''}`}></span>
 				<span className={`bars ${barsActive ? 'bars--active' : ''}`}></span>

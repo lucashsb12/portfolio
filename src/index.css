@@ -16,8 +16,11 @@ a{
 	text-decoration: none;
 	color: inherit;
 }
+button{
+	outline: none;
+	border: none;
+}
 html, body{
-	/* overflow-x: hidden; */
 	scroll-snap-type: y mandatory;
 	scroll-behavior: smooth;
 }
@@ -27,7 +30,8 @@ body{
 
 ::-webkit-scrollbar {
     background: #f4f4f4;
-    width: 6px;
+    width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-thumb {
     background: #0000003b;
@@ -38,7 +42,7 @@ body{
     background-color: #f4f4f4;
 }
 :root{
-	--primaria: #e1dbdb;
+	--primaria: #D2D2D2;
 	--destaque: #6C0FD9;
 	--pontual: #0084FF;
 }
@@ -46,6 +50,9 @@ body{
  /* CONTAINER GERAL DA APLICAÇÃO */
 
  .container-app{
+	background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
+	-web-kit-background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
+	-moz-background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
 	display: grid;
 	grid-template-columns: repeat(6, calc(100% / 6));
 	grid-template-rows: repeat(4, 100vh);

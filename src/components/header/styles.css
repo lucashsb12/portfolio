@@ -56,7 +56,6 @@
 
 /* Menu Mobile */
 
-
 /* hamburguer */
 
 .trigger-menu{
@@ -84,12 +83,9 @@
 }
 .bars--active:nth-child(2){
 	opacity: 0;
-	/* transform: rotate(-45deg) translateY(-8px); */
 }
 .bars--active:nth-child(3){
-	/* opacity: 0; */
 	transform: rotate(-45deg) translate(5px, -12px);
-
 }
 
 /* ******************** */
@@ -116,7 +112,6 @@
 	font-size: 25px;
 	padding: 10px;
 	transition: .4s;
-
 }
 .nav__items .nav__item-mobile:last-child{
 	background-color: var(--pontual);
@@ -126,6 +121,7 @@
 #menu:checked ~ .header__nav-mobile{
 	bottom: 0px;
 }
+
 /* ------------------------------ BREAKPOINTS  ------------------------------*/
 
 /* CELULAR */
@@ -133,6 +129,11 @@
 @media screen and (max-width: 768px){
 
 	/* MENEU */
+
+	.container-header{
+		grid-column: 1 / 7;
+		padding: 35px;
+	}
 
 	.header__nav{
 		display: none;
