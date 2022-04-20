@@ -14,7 +14,12 @@
 }
 .header__nav{
 	display: flex;
+	justify-content: end;
 	grid-column: 3 / 5;
+}
+.header__nav .nav__items{
+	flex: 0;
+	gap: 20px;
 }
 .nav__items{
 	flex: 1;
@@ -22,6 +27,9 @@
 	grid-template-columns: repeat(4, calc(100% / 4));
 	justify-items: center;
 	font-weight: bold;
+}
+.nav__item:first-child{
+	justify-self: flex-end;
 }
 .nav__item:not(:last-child):hover{
 	opacity: 1;

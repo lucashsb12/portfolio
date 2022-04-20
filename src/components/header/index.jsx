@@ -50,7 +50,7 @@ export const Header = () =>{
 						<a href="#habilidades">Habilidades</a>
 					</li>
 					<li className="nav__item">
-						<a href="#sobre">Sobre</a>
+						<a href="#sobre">Sobre mim</a>
 					</li>
 					<li className="nav__item">
 						<a href="#contato">Contato</a>
