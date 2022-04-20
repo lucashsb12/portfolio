@@ -27,13 +27,13 @@ export const Header = () =>{
 			<nav className="header__nav-mobile">
 				<ul className="nav__items">
 					<li className="nav__item-mobile">
-						<a href="#trabalhos"><FontAwesomeIcon icon={faLaptopCode}/></a>
+						<a href="#trabalhos"><FontAwesomeIcon icon={faHammer}/></a>
+					</li>
+					<li className="nav__item-mobile">
+						<a href="#habilidades"><FontAwesomeIcon icon={faLaptopCode}/></a>
 					</li>
 					<li className="nav__item-mobile">
 						<a href="#sobre"><FontAwesomeIcon icon={faComment}/></a>
-					</li>
-					<li className="nav__item-mobile">
-						<a href="#home"><FontAwesomeIcon icon={faHammer}/></a>
 					</li>
 					<li className="nav__item-mobile">
 						<a href="#contato"><FontAwesomeIcon icon={faAddressBook}/></a>
@@ -44,13 +44,13 @@ export const Header = () =>{
 			<nav className="header__nav">
 				<ul className="nav__items">
 					<li className="nav__item">
-						<a href="#trabalhos">Habilidades</a>
+						<a href="#trabalhos">Trabalhos</a>
+					</li>
+					<li className="nav__item">
+						<a href="#habilidades">Habilidades</a>
 					</li>
 					<li className="nav__item">
 						<a href="#sobre">Sobre</a>
-					</li>
-					<li className="nav__item">
-						<a href="#home">Trabalhos</a>
 					</li>
 					<li className="nav__item">
 						<a href="#contato">Contato</a>
