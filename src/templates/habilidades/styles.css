@@ -1,0 +1,6 @@
+.container-habilidades{
+	grid-row: 3;
+	grid-column: 1 / 7;
+	scroll-padding-top: 15vh;
+	scroll-snap-align: start;
+}

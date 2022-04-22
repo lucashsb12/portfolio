@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 @font-face {
 	font-family: 'marca';
 	src: url('./assets/fontes/stay-and-shine.ttf');
@@ -25,7 +28,10 @@ html, body{
 	scroll-behavior: smooth;
 }
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 ::-webkit-scrollbar {

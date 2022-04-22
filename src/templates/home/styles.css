@@ -17,7 +17,7 @@
 .container-logo{
 	grid-row: 3;
 	grid-column: 5;
-	animation: logo-motion 25s infinite;
+	animation: logo-motion 25s 1s infinite;
 }
 .logo{
 	filter: drop-shadow(2px 4px 6px rgba(3, 212, 212, 0.774));

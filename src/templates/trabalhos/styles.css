@@ -19,13 +19,27 @@
 .trabalhos__titulos h2{
 	cursor: pointer;
 }
+.underline{
+	width: 100px;
+	height: 3px;
+	background-color: var(--destaque);
+	position: absolute;
+	transition: 1s;
+}
 .container-trabalhos__explicacao{
 	grid-row: 2;
 	grid-column: 3 / 5;
 	display: flex;
-	align-items: center;
-	text-align: center;
+	flex-flow: column;
+	align-self: center;
 	font-size: 18px;
+}
+.container-trabalhos__texto{
+	font-size: 15px;
+}
+.container-trabalhos__detalhes{
+	margin-top: 15px;
+	font-size: 12px;
 }
 .container-cards{
 	display: grid;
@@ -45,11 +59,12 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	align-items: center;
-	width: 100%;
 	scroll-snap-align: center;
+	width: 100%;
+	padding: 30px 0px;
 }
 .trabalhos__card{
-	scroll-snap-align: center;
+	scroll-snap-align: start;
 	align-items: center;
 }
 .trabalhos__card__p{
@@ -69,45 +84,57 @@
 /* CARDS SISTEMAS */
 
 .cards__sistemas{
-	/* grid-template-columns: repeat(auto-fill, 1fr) !important; */
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 1fr;
 }
 .cards__sistemas .trabalhos__card{
 	display: grid;
-	grid-template-rows: 50% 40%;
+	grid-template-rows: repeat(3, 1fr);
 	grid-template-columns: 1fr;
-	padding: 10px;
-	width: 600px;
-	height: 70%;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 10px;
+	width: 450px;
+	height: 400px;
+	background: linear-gradient(322deg, rgba(108,15,217,1) 0%, rgba(183,12,232,1) 75%);
 }
-.cards__sistemas .trabalhos__card img{
-	width: 1000px;
+.trabalhos__card__ul__tecs{
+	display: flex;
 }
-.trabalhos__card__desc__titulo, .trabalhos__card__tecs__titulo{
-	text-align: center;
-	margin: 20px 0px;
+.trabalhos__card__desc p, .trabalhos__card__ul__tecs li{
+	font-size: 14px;
+}
+.trabalhos__card__ul__tecs li img{
+	width: 30px;
+	margin-top: 3x;
+	margin-right: 20px;
 }
 .trabalhos__card__trigger-imagens{
 	padding: 20px;
 	margin: 10px 0px;
 	border-radius: 10px;
 	cursor: pointer;
+	color: rgba(108,15,217,1);
+	background-color: var(--primaria);
+}
+.trabalhos__card__ul__tecs li .css, .trabalhos__card__ul__tecs li .html{
+	width: 28px;
 }
 
 /* CARDS SITES */
 
 .cards__sites .trabalhos__card{
 	display: grid;
-	grid-template-rows: repeat(3, 150px);
+	grid-template-rows: repeat(3, 1fr);
 	justify-items: center;
 	flex: 1;
-	width: 550px;
-	height: 450px;
+	width: 450px;
+	height: 400px;
 	margin: 0px 20px;
 	border-radius: 10px;
 	padding: 20px;
-	background: linear-gradient(322deg, rgba(108,15,217,1) 0%, rgba(183,12,232,1) 75%);;
+	background: linear-gradient(322deg, rgba(108,15,217,1) 0%,
+		rgba(183,12,232,1) 75%);
 }
 .cards__sites .trabalhos__card__img{
 	animation: logo-motion-sites 12s infinite;
@@ -133,14 +160,9 @@
 /* CARDS ARTES */
 
 .cards__artes .trabalhos__card{
-	justify-items: center;
-	flex: 1;
-	width: 550px;
-	height: 100%;
-	/* margin: 0px 20px; */
-	border-radius: 10px;
-	margin: 0px 20px 0px 20px;
-	padding: 0px 20px 0px 20px;
+	width: 450px;
+	height: 400px;
+	margin: 20px;
 }
 .cards__artes .trabalhos__card__img{
 	width: 100%;
@@ -156,24 +178,36 @@
 
 .container-galeria{
 	position: absolute;
-	/* left: 0; */
-	/* top: 0; */
-	grid-column: 1 / 7;
-	grid-row: 2;
 	width: 100%;
 	height: 100%;
-	display: flex;
-	flex-flow: row nowrap;
-	/* grid-template-columns: repeat(auto-fit, 1fr); */
-	/* grid-template-columns: repeat(auto-fit, minmax(100%, 100%)); */
-	grid-auto-rows: 1fr;
+	backdrop-filter: blur(10px);
+	grid-column: 1 / 7;
+	grid-row: 2;
+}
+.container-galeria__container-imgs{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(5, 100vw);
 	overflow-x: scroll;
-	justify-content: center;
+	align-items: center;
+
 }
 .container-galeria img{
-	margin: 20px;
-	width: 90vw;
-	height: 90vh;
+	width: 100%;
+	padding: 40px;
+	border-radius: 10px;
+}
+.container-galeria__close{
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	font-size: 30px;
+	cursor: pointer;
+	z-index: 10;
+	transition: .4s;
+}
+.container-galeria__close:hover{
+	color: #f11717;
 }
 
 
@@ -183,33 +217,53 @@
 
 @media screen and (max-width: 768px){
 	.container-trabalhos{
-		grid-template-rows: 150px 25vh 1fr;
+		grid-template-rows: 100px 25vh 1fr;
 	}
 	.trabalhos__titulos{
 		justify-content: space-evenly;
-		align-items: center;
+		align-items: flex-start;
+		padding-top: 20px;
 		font-size: 18px;
 	}
 	.container-cards, .trabalhos__titulos{
 		grid-column: 1 / 7;
 	}
-	.cards__sites .trabalhos__card{
+	.cards .trabalhos__card{
 		width: 90vw;
-		height: 400px;
-		margin-bottom: 40px;
-		padding-bottom: 40px;
-		grid-template-rows: 100px repeat(2, 150px);
 	}
-	.cards__artes .trabalhos__card{
-		width: 95vw;
-	}
+
 	.trabalhos__card a{
 		display: flex;
 		align-items: center;
 	}
 	.container-trabalhos__explicacao{
 		grid-column: 1 / 7;
-		padding: 0px 30px 0px ;
+		padding: 0px 18px;
 		align-items: flex-start;
+	}
+
+	/* GALERIA */
+
+	.container-galeria{
+		position: absolute;
+		grid-column: 1 / 7;
+		grid-row: 2;
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 100vw;
+		grid-template-rows: repeat(5, 100vh);
+		align-items: center;
+		justify-items: center;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		backdrop-filter: blur(10px);
+	}
+	.container-galeria img{
+		width: 100vh;
+		height: 100vw;
+		transform: rotate(90deg);
+		padding: 20px;
+		border-radius: 10px;
 	}
 }
