@@ -13,7 +13,7 @@
 	justify-content: space-between;
 	align-items: flex-end;
 	grid-row: 1;
-	grid-column: 3 / 5;
+	grid-column: 2 / 3;
 	font-size: 20px;
 }
 .trabalhos__titulos h2{
@@ -22,23 +22,26 @@
 .underline{
 	width: 100px;
 	height: 3px;
-	background-color: var(--destaque);
+	background-color: var(--destaque2);
 	position: absolute;
-	transition: 1s;
+	transition: all 1s ease-in-out;
 }
 .container-trabalhos__explicacao{
 	grid-row: 2;
-	grid-column: 3 / 5;
+	grid-column: 2 / 4;
 	display: flex;
 	flex-flow: column;
 	align-self: center;
 	font-size: 18px;
 }
+.container-trabalhos__titulo{
+	color: var(--destaque2)
+}
 .container-trabalhos__texto{
 	font-size: 15px;
 }
 .container-trabalhos__detalhes{
-	margin-top: 15px;
+	margin-top: 5px;
 	font-size: 12px;
 }
 .container-cards{
@@ -209,7 +212,21 @@
 .container-galeria__close:hover{
 	color: #f11717;
 }
-
+.container-trabalhos .faixa.faixa--branco{
+	grid-column: 6;
+	grid-row: 2 / 5;
+	justify-self: center;
+	background-color: var(--primaria);
+	width: 3vw;
+	border-radius: 10px 10px 0px 0px;
+}
+.container-trabalhos .faixa--roxo{
+	grid-column: 1;
+	grid-row: 1 / 2;
+	justify-self: center;
+	background-color: var(--destaque);
+	border-radius: 0px 0px 10px 10px;
+}
 
 /* ------------------------------ BREAKPOINTS  ------------------------------*/
 
@@ -231,14 +248,13 @@
 	.cards .trabalhos__card{
 		width: 90vw;
 	}
-
 	.trabalhos__card a{
 		display: flex;
 		align-items: center;
 	}
 	.container-trabalhos__explicacao{
-		grid-column: 1 / 7;
-		padding: 0px 18px;
+		grid-column: 2 / 6;
+		/* padding: 0px 18px; */
 		align-items: flex-start;
 	}
 

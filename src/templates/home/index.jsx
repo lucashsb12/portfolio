@@ -9,22 +9,22 @@ export const Home = () =>{
 		const appear = {
 			opacity: 0,
 			easing: 'ease-in-out',
-			duration: 1000
-
+			duration: 1000,
+			cleanup: true
 		};
+
 		const slideUp = {
 			distance: '200px',
 			origin: 'bottom',
 			opacity: 0,
 			easing: 'ease-in-out',
-			duration: 2000
-
+			duration: 2000,
+			cleanup: true
 		};
 		scrollreveal().reveal('.container-logo', appear);
 		scrollreveal().reveal('.container-header', appear);
 		scrollreveal().reveal('.home__frase', slideUp);
-		scrollreveal().destroy();
-	}, [])
+	}, []);
 
 	return(
 		<div id="home" className="container-home">
@@ -39,7 +39,7 @@ export const Home = () =>{
 			<div className="container-logo">
 				<img src={logo} alt="Logomarca Lucas Henrique" className="logo" />
 			</div>
-
+			<div className="faixa faixa--roxo"></div>
 		</div>
 	)
 }

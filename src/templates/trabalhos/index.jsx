@@ -16,13 +16,13 @@ export const Trabalhos = () =>{
 
 
 	useEffect(() =>{
-		const slideUp = {
-			distance: '200px',
-			origin: 'bottom',
+		const animation = {
 			opacity: 0,
 			easing: 'ease-in'
 		};
-		ScrollReveal().reveal('.cards', slideUp);
+		ScrollReveal().reveal('.cards__sistemas', animation);
+		ScrollReveal().reveal('.cards__artes', animation);
+		ScrollReveal().reveal('.cards__sites', animation);
 
 		const underline = document.getElementById("underline");
 		const titulo = document.getElementById("trabalhos__titulo");
@@ -149,7 +149,9 @@ export const Trabalhos = () =>{
 					</div>
 				</div>
 			}
-
+			<div className="faixa faixa--branco"></div>
+			<div className="faixa faixa--roxo"></div>
 		</div>
+
 	);
 }

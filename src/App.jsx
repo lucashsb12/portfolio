@@ -1,3 +1,4 @@
+import { Contato } from "./templates/contato";
 import { Habilidades } from "./templates/habilidades";
 import { Home } from "./templates/home";
 import { Trabalhos } from "./templates/trabalhos";
@@ -8,6 +9,7 @@ export const App = () => {
 		<Home></Home>
 		<Trabalhos></Trabalhos>
 		<Habilidades></Habilidades>
+		<Contato></Contato>
     </div>
   );
 }

@@ -50,20 +50,25 @@ h1, h2, h3, h4, h5, h6{
 :root{
 	--primaria: #D2D2D2;
 	--destaque: #6C0FD9;
+	--destaque2: #b70ce8;
+	--destaque3: #00b3f9;
 	--pontual: #0084FF;
 }
 
  /* CONTAINER GERAL DA APLICAÇÃO */
 
  .container-app{
-	background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
-	-web-kit-background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
-	-moz-background-image: linear-gradient(90deg, #1e1e1e 0%, black 100%);
+	background-image: linear-gradient(180deg, #1e1e1e 0%, black 100%);
+	-web-kit-background-image: linear-gradient(180deg, #1e1e1e 0%, black 100%);
+	-moz-background-image: linear-gradient(180deg, #1e1e1e 0%, black 100%);
 	display: grid;
 	grid-template-columns: repeat(6, calc(100% / 6));
 	grid-template-rows: repeat(4, 100vh);
 }
-
 .link__destaque{
 	color: var(--pontual)
+}
+.faixa{
+	height: 100%;
+	width: 5vw;
 }

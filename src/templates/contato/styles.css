@@ -1,0 +1,17 @@
+.container-contato{
+	scroll-snap-align: start;
+	grid-row: 4;
+	grid-column: 1 / 7;
+	scroll-padding-top: 15vh;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 100px 300px 1fr 25vh;
+}
+.container-contato .faixa--azul{
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: center;
+	background-color: var(--pontual);
+	border-radius: 0px 0px 10px 10px;
+	width: 4vw;
+}

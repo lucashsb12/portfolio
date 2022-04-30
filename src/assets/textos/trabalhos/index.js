@@ -1,46 +1,44 @@
 /* IMPORTS SITES */
-import logoFortex from '../../imagens/logo-fortex.png';
-import logoCerimonial from '../../imagens/logo-cerimonial.webp';
-import logoLavafort from '../../imagens/logo_header.png';
+import logoFortex from '../../imagens/logos/logo-fortex.png';
+import logoCerimonial from '../../imagens/logos/logo-cerimonial.webp';
+import logoLavafort from '../../imagens/logos/logo_header.png';
 
 /* IMPORTS ARTES */
-import arte1 from '../../imagens/Comente-o-seu-melhor-conselho.jpg';
-import arte2 from '../../imagens/Dia_incrivel.jpg';
-import arte3 from '../../imagens/Feed-5_dicas_clientes-01.jpg';
-import arte4 from '../../imagens/OqueNaoFazerNoMarketing.jpg';
+import arte1 from '../../imagens/artes/Comente-o-seu-melhor-conselho.jpg';
+import arte2 from '../../imagens/artes/Dia_incrivel.jpg';
+import arte3 from '../../imagens/artes/Feed-5_dicas_clientes-01.jpg';
+import arte4 from '../../imagens/artes/OqueNaoFazerNoMarketing.jpg';
 
 /* IMPORTES SISTEMAS */
-import img_ad1 from '../../imagens/img_ad1.png';
-import img_ad2 from '../../imagens/img_ad2.png';
-import img_ad3 from '../../imagens/img_ad3.png';
-import img_ad4 from '../../imagens/img_ad4.png';
-import img_ad5 from '../../imagens/img_ad5.png';
-import img_vacina_sp1 from '../../imagens/img_vacina_sp1.png';
-import img_vacina_sp2 from '../../imagens/img_vacina_sp2.png';
-import img_vacina_sp3 from '../../imagens/img_vacina_sp3.png';
-import img_vacina_sp4 from '../../imagens/img_vacina_sp4.png';
-import img_vacina_sp5 from '../../imagens/img_vacina_sp5.png';
-import img_roh1 from '../../imagens/img_roh1.png';
-import img_roh2 from '../../imagens/img_roh2.png';
-import img_roh3 from '../../imagens/img_roh3.png';
-import img_roh4 from '../../imagens/img_roh4.png';
-import img_donca1 from '../../imagens/img_donca1.png';
-import img_donca2 from '../../imagens/img_donca2.png';
-import img_donca3 from '../../imagens/img_donca3.png';
-import img_donca4 from '../../imagens/img_donca4.png';
-import img_sis_dtic1 from '../../imagens/img_sis_dtic1.png';
-import img_sis_dtic2 from '../../imagens/img_sis_dtic2.png';
-import img_sis_dtic3 from '../../imagens/img_sis_dtic3.png';
-import img_sis_dtic4 from '../../imagens/img_sis_dtic4.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import html from '../../imagens/html5-brands.svg';
-import jquery from '../../imagens/icons8-jquery.svg';
-import javascript from '../../imagens/js-square-brands.svg';
-import css from '../../imagens/css3-alt-brands.svg';
-import react from '../../imagens/react-brands.svg';
+import img_ad1 from '../../imagens/sistemas/img_ad1.png';
+import img_ad2 from '../../imagens/sistemas/img_ad2.png';
+import img_ad3 from '../../imagens/sistemas/img_ad3.png';
+import img_ad4 from '../../imagens/sistemas/img_ad4.png';
+import img_ad5 from '../../imagens/sistemas/img_ad5.png';
+import img_vacina_sp1 from '../../imagens/sistemas/img_vacina_sp1.png';
+import img_vacina_sp2 from '../../imagens/sistemas/img_vacina_sp2.png';
+import img_vacina_sp3 from '../../imagens/sistemas/img_vacina_sp3.png';
+import img_vacina_sp4 from '../../imagens/sistemas/img_vacina_sp4.png';
+import img_vacina_sp5 from '../../imagens/sistemas/img_vacina_sp5.png';
+import img_roh1 from '../../imagens/sistemas/img_roh1.png';
+import img_roh2 from '../../imagens/sistemas/img_roh2.png';
+import img_roh3 from '../../imagens/sistemas/img_roh3.png';
+import img_roh4 from '../../imagens/sistemas/img_roh4.png';
+import img_donca1 from '../../imagens/sistemas/img_donca1.png';
+import img_donca2 from '../../imagens/sistemas/img_donca2.png';
+import img_donca3 from '../../imagens/sistemas/img_donca3.png';
+import img_donca4 from '../../imagens/sistemas/img_donca4.png';
+import img_sis_dtic1 from '../../imagens/sistemas/img_sis_dtic1.png';
+import img_sis_dtic2 from '../../imagens/sistemas/img_sis_dtic2.png';
+import img_sis_dtic3 from '../../imagens/sistemas/img_sis_dtic3.png';
+import img_sis_dtic4 from '../../imagens/sistemas/img_sis_dtic4.png';
 
 /* icones */
-
+import html from '../../imagens/icones/html.svg';
+import jquery from '../../imagens/icones/jquery.svg';
+import javascript from '../../imagens/icones/javascript.svg';
+import css from '../../imagens/icones/css.svg';
+import react from '../../imagens/icones/react.svg';
 
 
 export const sites = {
@@ -137,8 +135,8 @@ export const sistemas = {
 					de pacientes cadastrados no sistema. O sistema conta com um módulo dedicado ao
 					COVID 19.`,
 			tecs:[
-					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" src={css}
-			 		alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
+					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" title="CSS3"
+					src={css} alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
 					<img src={jquery} title="Jquery" alt="Logo Jquery"/>
 				],
 			imgs: [
@@ -150,8 +148,8 @@ export const sistemas = {
 			desc: `Sistema desenvolvido para auxiliar os profissionais de saúde no controle
 					de estoque e vacinas aplicadas COVID 19 em cada unidade de saúde.`,
 			tecs:[
-					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" src={css}
-			 		alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
+					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" title="CSS3"
+					src={css} alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
 					<img src={jquery} title="Jquery" alt="Logo Jquery"/>
 				],
 			imgs: [
@@ -163,8 +161,8 @@ export const sistemas = {
 			desc: `Sistema desenvolvido para auxiliar os profissionais de saúde no controle de leitos ocupados
 					nos hospitais do município de São Paulo.`,
 			tecs:[
-					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" src={css}
-			 		alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
+					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" title="CSS3"
+					src={css} alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
 					<img src={jquery} title="Jquery" alt="Logo Jquery"/>
 				],
 			imgs: [
@@ -176,8 +174,8 @@ export const sistemas = {
 			desc: `Sistema desenvolvido para auxiliar os profissionais de saúde no controle
 					das carteiras de vacinação de crianças e adolescentes no município de São Paulo.`,
 			tecs:[
-					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" src={css}
-			 		alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
+					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" title="CSS3"
+					src={css} alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>,
 					<img src={jquery} title="Jquery" alt="Logo Jquery"/>
 				],
 			imgs:[
@@ -190,9 +188,9 @@ export const sistemas = {
 			onde trabalho atualmente. Ele ajuda a gerenciar contratos, métricas e automatizar trabalhos
 			que eram feitos manualmente.`,
 			tecs: [
-					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" src={css}
-			 		alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>, <img src={react}
-			 		alt="Logo ReactJs"/>
+					<img className="html" src={html} title="HTML5" alt="Logo HTML5"/>, <img className="css" title="CSS3"
+					src={css} alt="Logo CSS3"/>, <img src={javascript} title="Javascript" alt="Logo Javascript"/>, <img src={react}
+			 		title="ReactJs" alt="Logo ReactJs"/>
 				],
 			imgs:[
 				img_sis_dtic1, img_sis_dtic2, img_sis_dtic3, img_sis_dtic4
