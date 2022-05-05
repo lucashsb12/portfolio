@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressBook, faComment, faLaptopCode, faHammer } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook, faLaptopCode, faHammer } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import './styles.css';
 
@@ -33,9 +33,6 @@ export const Header = () =>{
 						<a href="#habilidades"><FontAwesomeIcon icon={faLaptopCode}/></a>
 					</li>
 					<li className="nav__item-mobile">
-						<a href="#sobre"><FontAwesomeIcon icon={faComment}/></a>
-					</li>
-					<li className="nav__item-mobile">
 						<a href="#contato"><FontAwesomeIcon icon={faAddressBook}/></a>
 					</li>
 				</ul>
@@ -48,9 +45,6 @@ export const Header = () =>{
 					</li>
 					<li className="nav__item">
 						<a href="#habilidades">Habilidades</a>
-					</li>
-					<li className="nav__item">
-						<a href="#sobre">Sobre mim</a>
 					</li>
 					<li className="nav__item">
 						<a href="#contato">Contato</a>

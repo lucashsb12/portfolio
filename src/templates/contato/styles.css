@@ -5,7 +5,42 @@
 	scroll-padding-top: 15vh;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: 100px 300px 1fr 25vh;
+	grid-template-rows: 100px 100px 1fr 1fr 1fr 25vh;
+	background-image: linear-gradient(to right, transparent 50%, var(--primaria) 50%);
+}
+.container-apresentacao{
+	grid-column: 2 / 4;
+	grid-row: 3 / 6;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+.texto{
+	color: var(--primaria);
+	font-size: 25px;
+	padding-right: 15px;
+	grid-row: 2;
+	grid-column: 1 / 5;
+}
+#perfil{
+	border-radius: 50%;
+	width: 200px;
+	border: 5px solid var(--primaria);
+}
+.container-social{
+	grid-column: 4 / 6;
+	grid-row: 3 / 6;
+	display: flex;
+	align-items: center;
+	justify-content: stretch;
+}
+.container-icones{
+	display: flex;
+	flex: 1;
+	justify-content: space-evenly;
+}
+.container-social__icone img{
+	width: 50px;
 }
 .container-contato .faixa--azul{
 	grid-column: 1;

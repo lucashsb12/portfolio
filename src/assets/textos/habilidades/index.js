@@ -116,4 +116,4 @@ export const design = {
 }
 
 export const texto = `Aqui estão as linguagens e as principais ferramentas que utilizo para desenvolver
-e criar conteúdos e artes para as redes sociais.`
+e criar conteúdos para as redes sociais.`

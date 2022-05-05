@@ -17,15 +17,22 @@ export const Habilidades = () =>{
 			<div className="container-itens container-programacao">
 				<h2 className='container-itens__titulo'>{listaProgramacao.linguagens.titulo}</h2>
 				<div className='container__linguagens'>
-					<ul className="container__lista-linguagens">
+					<ul className="container__lista container__lista--linguagens">
 						{listaProgramacao.linguagens.itens.map((item, index) =>{
 								return <li key={index} className="container__item">{item.nome} {item.icone} </li>
 							})
 						}
 					</ul>
 				</div>
+			</div>
+			<div className="container-itens container-ferramentas">
+				<h2 className='container-itens__titulo'>Ferramentas</h2>
 				<div className='container__ferramentas'>
-					<ul className="container__lista-ferramentas">
+					<ul className="container__lista container__lista--ferramentas">
+						{listaDesign.ferramentas.itens.map((item, index) =>{
+								return <li key={index} className="container__item">{item.nome} {item.icone} </li>
+							})
+						}
 						{listaProgramacao.ferramentas.itens.map((item, index) =>{
 								return <li key={index} className="container__item">{item.nome} {item.icone} </li>
 							})
@@ -33,20 +40,11 @@ export const Habilidades = () =>{
 					</ul>
 				</div>
 			</div>
-			<h2 className='container-habilidades__titulo container-habilidades__titulo--ferramentas'>Ferramentas</h2>
 			<div className="container-itens container-design">
 				<h2 className='container-itens__titulo'>{listaDesign.linguagens.titulo}</h2>
 				<div className='container__linguagens'>
-					<ul className="container__lista-linguagens">
+					<ul className="container__lista container__lista--linguagens">
 						{listaDesign.linguagens.itens.map((item, index) =>{
-								return <li key={index} className="container__item">{item.nome} {item.icone} </li>
-							})
-						}
-					</ul>
-				</div>
-				<div className='container__ferramentas'>
-					<ul className="container__lista-ferramentas">
-						{listaDesign.ferramentas.itens.map((item, index) =>{
 								return <li key={index} className="container__item">{item.nome} {item.icone} </li>
 							})
 						}

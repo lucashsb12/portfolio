@@ -64,6 +64,7 @@
 	align-items: center;
 	scroll-snap-align: center;
 	width: 100%;
+	gap: 40px;
 	padding: 30px 0px;
 }
 .trabalhos__card{
@@ -95,7 +96,6 @@
 	grid-template-rows: repeat(3, 1fr);
 	grid-template-columns: 1fr;
 	padding: 20px;
-	margin: 20px;
 	border-radius: 10px;
 	width: 450px;
 	height: 400px;
@@ -133,7 +133,6 @@
 	flex: 1;
 	width: 450px;
 	height: 400px;
-	margin: 0px 20px;
 	border-radius: 10px;
 	padding: 20px;
 	background: linear-gradient(322deg, rgba(108,15,217,1) 0%,
@@ -256,6 +255,9 @@
 		grid-column: 2 / 6;
 		/* padding: 0px 18px; */
 		align-items: flex-start;
+	}
+	.container-trabalhos .faixa.faixa--branco{
+		justify-self: flex-end;
 	}
 
 	/* GALERIA */
