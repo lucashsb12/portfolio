@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import scrollreveal from 'scrollreveal';
 import { design, programacao, texto  } from '../../assets/textos/habilidades';
 import './styles.css';
 
@@ -7,6 +8,30 @@ export const Habilidades = () =>{
 	const [listaProgramacao, setListaProgramacao] = useState(programacao);
 	const [listaDesign, setListaDesign] = useState(design);
 	const [textoHabilidades] = useState(texto);
+
+	useEffect(() =>{
+		const appear = {
+			opacity: 0,
+			easing: 'ease-in-out',
+			duration: 1000,
+			cleanup: true
+		};
+
+		const slideUp = {
+			distance: '200px',
+			origin: 'bottom',
+			opacity: 0,
+			easing: 'ease-in-out',
+			duration: 2000,
+			cleanup: true
+		};
+		scrollreveal().reveal('.container-habilidades__titulo', appear);
+		scrollreveal().reveal('.container-texto', appear);
+		scrollreveal().reveal('.container-header', appear);
+		scrollreveal().reveal('.container-itens', slideUp);
+
+	}, []);
+
 
 	return(
 		<div id="habilidades" className="container-habilidades">

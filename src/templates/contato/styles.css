@@ -36,11 +36,20 @@
 }
 .container-icones{
 	display: flex;
+	flex-flow: column;
+	align-items: center;
 	flex: 1;
 	justify-content: space-evenly;
 }
 .container-social__icone img{
-	width: 50px;
+	width: 150px;
+	transition: .4s ease-in-out;
+}
+.container-social__icone:last-child img{
+	width: 180px;
+}
+.container-social__icone img:hover{
+	filter: drop-shadow(1px 1px 15px rgba(0,0,0,.4));
 }
 .container-contato .faixa--azul{
 	grid-column: 1;
