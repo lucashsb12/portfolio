@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.63fae316.css",
-    "main.js": "/portfolio/static/js/main.56921553.js",
+    "main.js": "/portfolio/static/js/main.d9e17afd.js",
     "static/media/Dia_incrivel.jpg": "/portfolio/static/media/Dia_incrivel.be26246ce271388cc12d.jpg",
     "static/media/Feed-5_dicas_clientes-01.jpg": "/portfolio/static/media/Feed-5_dicas_clientes-01.726e2163bd7f26dd2a7d.jpg",
     "static/media/OqueNaoFazerNoMarketing.jpg": "/portfolio/static/media/OqueNaoFazerNoMarketing.2cf99f8d5f1cd09900fb.jpg",
@@ -54,10 +54,10 @@
     "static/media/html.svg": "/portfolio/static/media/html.ffe733f0b48440c23b480a88f03b7c45.svg",
     "static/media/analytics.svg": "/portfolio/static/media/analytics.d1e7f134918c15b4ced9a3acf2593add.svg",
     "main.63fae316.css.map": "/portfolio/static/css/main.63fae316.css.map",
-    "main.56921553.js.map": "/portfolio/static/js/main.56921553.js.map"
+    "main.d9e17afd.js.map": "/portfolio/static/js/main.d9e17afd.js.map"
   },
   "entrypoints": [
     "static/css/main.63fae316.css",
-    "static/js/main.56921553.js"
+    "static/js/main.d9e17afd.js"
   ]
 }
