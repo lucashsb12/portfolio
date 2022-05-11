@@ -14,6 +14,17 @@ export const Trabalhos = () =>{
 	const [infosSistemas] = useState(sistemas);
 	const [galeria, setGaleria] = useState('');
 
+	window.addEventListener('resize', () =>{
+			const underline = document.getElementById("underline");
+			const titulo = document.querySelector(`.${exibirExplicacao}`);
+			const novoTamanho = titulo.getBoundingClientRect().width;
+			const novaPosicao = titulo.getBoundingClientRect().left + window.pageXOffset + 1;
+			const novaAltura = titulo.getBoundingClientRect().top + window.pageYOffset + 32;
+
+			underline.style.left = `${novaPosicao}px`;
+			underline.style.top = `${novaAltura}px`;
+			underline.style.width = `${novoTamanho}px`;
+	});
 
 	useEffect(() =>{
 		const animation = {
@@ -24,16 +35,18 @@ export const Trabalhos = () =>{
 		ScrollReveal().reveal('.cards__artes', animation);
 		ScrollReveal().reveal('.cards__sites', animation);
 
-		const underline = document.getElementById("underline");
-		const titulo = document.getElementById("trabalhos__titulo");
-		const novoTamanho = titulo.getBoundingClientRect().width;
-		const novaPosicao = titulo.getBoundingClientRect().left + window.pageXOffset + 1;
-		const novaAltura = titulo.getBoundingClientRect().top + window.pageYOffset + 32;
+		setTimeout(() => {
+			const underline = document.getElementById("underline");
+			const titulo = document.querySelector(`.${exibirExplicacao}`);
+			const novoTamanho = titulo.getBoundingClientRect().width;
+			const novaPosicao = titulo.getBoundingClientRect().left + window.pageXOffset + 1;
+			const novaAltura = titulo.getBoundingClientRect().top + window.pageYOffset + 32;
 
-		underline.style.left = `${novaPosicao}px`;
-		underline.style.top = `${novaAltura}px`;
-		underline.style.width = `${novoTamanho}px`;
-	}, []);
+			underline.style.left = `${novaPosicao}px`;
+			underline.style.top = `${novaAltura}px`;
+			underline.style.width = `${novoTamanho}px`;
+		}, 2000);
+	}, [exibirExplicacao]);
 
 	const handleEfeitoTitulo = (event, sessao) =>{
 		setExibirExplicacao(sessao);
@@ -53,11 +66,10 @@ export const Trabalhos = () =>{
 		<div id="trabalhos" className="container-trabalhos">
 
 				<div className="trabalhos__titulos">
-					<h2 onClick={(event) => handleEfeitoTitulo(event, 'sistemas')} id="trabalhos__titulo"
-						className="trabalhos__titulo">Sistemas</h2>
-					<h2 onClick={(event) => handleEfeitoTitulo(event, 'sites')} className="trabalhos__titulo">Sites
+					<h2 onClick={(event) => handleEfeitoTitulo(event, 'sistemas')} className="trabalhos__titulo sistemas">Sistemas</h2>
+					<h2 onClick={(event) => handleEfeitoTitulo(event, 'sites')} className="trabalhos__titulo sites">Sites
 					</h2>
-					<h2 onClick={(event) => handleEfeitoTitulo(event, 'artes')} className="trabalhos__titulo">Artes
+					<h2 onClick={(event) => handleEfeitoTitulo(event, 'artes')} className="trabalhos__titulo artes">Artes
 					</h2>
 					<div id="underline" className='underline'></div>
 				</div>
